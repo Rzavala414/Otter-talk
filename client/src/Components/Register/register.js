@@ -3,8 +3,7 @@ import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import Checkbox from '@material-ui/core/Checkbox';
+// import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Link from '@material-ui/core/Link';
 import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
@@ -43,11 +42,16 @@ const useStyles = makeStyles((theme) => ({
   },
   submit: {
     margin: theme.spacing(3, 0, 2),
-  },
+  }
 }));
+
 
 export default function SignUp() {
   const classes = useStyles();
+
+  const handleChange = (event) => {
+    
+  }
 
   return (
     <Container component="main" maxWidth="xs">
@@ -116,7 +120,7 @@ export default function SignUp() {
                 name="password"
                 label="Confirm Password"
                 type="password"
-                id="password"
+                id="password-confirm"
                 autoComplete="current-password"
               />
             </Grid>

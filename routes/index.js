@@ -1,6 +1,6 @@
 const main = require('express').Router();
 
-// login/Landing page
+// display login page
 main.get('/', (req, res) => {
    res.send('login')
 })
