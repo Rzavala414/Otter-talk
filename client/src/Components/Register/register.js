@@ -107,6 +107,19 @@ export default function SignUp() {
                 autoComplete="current-password"
               />
             </Grid>
+            
+            <Grid item xs={12}>
+              <TextField
+                variant="outlined"
+                required
+                fullWidth
+                name="password"
+                label="Confirm Password"
+                type="password"
+                id="password"
+                autoComplete="current-password"
+              />
+            </Grid>
           
           </Grid>
           <Button
