@@ -1,5 +1,4 @@
-import React, {useState} from 'react';
-
+import React, {useState, useEffect} from 'react';
 import axios from 'axios'
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
@@ -13,6 +12,7 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
+import passport from 'passport';
 
 function Copyright() {
   return (
@@ -56,12 +56,7 @@ export default function SignUp() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [password2, setPassword2] = useState('')
-  console.log('firstName state:', firstName);
-  console.log('lastName state:', lastName);
-  console.log('email state:', email);
-  console.log('password state:', password);
-  console.log('password2 state:', password2);
-  
+ 
  
  const submit = event => {
     event.preventDefault();
