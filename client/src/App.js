@@ -1,12 +1,19 @@
 import React from 'react';
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import Signup from './Pages/register';
+import Login from './Pages/Login/login'
 import './App.css';
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-     
-    </div>
+    <Router>
+      <>
+        <Route exact path='/' component={Login}/>
+        <Route exact path='/register' component={Signup}/>
+      </>
+    </Router>
   );
 }
 
-export default App;
+
+
