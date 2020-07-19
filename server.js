@@ -1,6 +1,7 @@
 const express = require('express');
 const morgan = require('morgan');
-var bodyParser = require('body-parser')
+const bodyParser = require('body-parser');
+const cors = require('cors')
 const passport = require('passport');
 const connectDB = require('./config/database')
 const router = require('./routes/router');
@@ -10,8 +11,9 @@ const app = express();
 require('dotenv').config({ path: './config/keys.env' });
 
 // Middleware
+app.use(cors())
+app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }))
-app.use(bodyParser.json())
 app.use(morgan('dev'));
 
 //Passport strategies
