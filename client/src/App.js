@@ -16,9 +16,6 @@ export default function App() {
     </Router>
   );
 }
-// joji the best
-// we testing out here
-//random message
 
 
 
