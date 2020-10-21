@@ -1,10 +1,8 @@
 const user = require('express').Router();
-const User = require('../models/User')
+const User = require('../models/User');
 const bcrypt = require('bcrypt');
 
-user.get('/register', (req, res) => {
-    res.send('registration')
-});
+
 
 user.post('/register', (req, res) => {
     
@@ -12,7 +10,6 @@ user.post('/register', (req, res) => {
     
     User.findOne({email: email})
     .then(user => {
-        console.log(user)
         if(user){
             //User exists error
             return 'user already exists'
@@ -40,7 +37,10 @@ user.post('/register', (req, res) => {
               })
           })
         }
+        
     })
+
+   
 })
 
 

@@ -1,10 +1,13 @@
 const router = require('express').Router();
 const user = require('./user');
-const main = require('./index');
+const localAuth = require('./localAuth');
+
 //User routes
 router.use('/users', user);
 
-//Landing page routes
-router.use('/', main);
+//router.use('/user', post)
+
+//Authorization using local passport
+router.use('/', localAuth);
 
 module.exports = router;
